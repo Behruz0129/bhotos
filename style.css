@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+
+html {
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+header {
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+}
+
+header h2 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+#logo {
+  color: #00c943;
+  text-decoration: none;
+  font-family: 'Ranchers', cursive;
+}
+
+.search-form {
+  padding: 1.5rem;
+  display: flex;
+  border-radius: 30px;
+}
+
+.search-form input {
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  border: none;
+  border: 1px solid #00c943;
+  color: #00c943;
+  outline: none;
+  border-radius: 30px 0 0 30px;
+}
+
+.search-form button {
+  border: none;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  background-color: #00c943;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  border-radius: 0 30px 30px 0;
+}
+
+main {
+  margin-top: 40vh;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  flex-wrap: wrap;
+  padding: 20px 50px;
+}
+
+.gallery-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gallery-img div {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gallery-img div p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  margin: 0;
+}
+.gallery-img div a {
+  background-color: #00c943;
+  padding: 0.7rem 1rem;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.gallery-img img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.nav-button {
+  min-height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-button button {
+  background-color: #008d2f;
+  padding: 1rem 5rem;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 1250px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 950px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 700px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    align-self: center;
+    padding: 20px 20px;
+  }
+}
+@media (max-width: 300px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    align-self: center;
+    padding: 10px;
+  }
+  .gallery-img {
+    width: 100%;
+  }
+}
